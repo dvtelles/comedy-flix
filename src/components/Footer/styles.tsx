@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+//  TODO: Criar tema.
 
 export const FooterBase = styled.footer`
   background: var(--black);
@@ -14,3 +14,13 @@ export const FooterBase = styled.footer`
     margin-bottom: 50px;
   }
 `;
+
+export const AluraLogo = styled.img.attrs({
+  src: 'https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg',
+  alt: 'Alura logo',
+})``;
+
+export const AluraLogoLink = styled.a.attrs({
+  href: "https://www.alura.com.br",
+  target: "_blank"
+})``;

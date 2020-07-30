@@ -1,13 +1,12 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 
-
-export const ButtonLink: FC<{href: string, className: string}> = (props) => {
-    const href = props.href;
-    const className = props.className;
-
-    return (
-        <a className={className} href={href}>
-            {props.children}
-        </a>
-    )
+type ButtonLinkProps = {
+    href: string,
+    className: string
 }
+
+export const ButtonLink: FC<ButtonLinkProps> = ({ href, className, children }) => (
+    <a className={className} href={href}>
+        {children}
+    </a>
+)

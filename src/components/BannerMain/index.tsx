@@ -2,14 +2,10 @@ import React, { FC } from 'react';
 import {VideoIframeResponsive} from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
 
-const getYoutubeId = function (url: string) {
-    return url
-        .replace(
-            /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-            '$7');
-}
+const REGEX = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/; 
+const getYoutubeId = (url: string) => url.replace(REGEX, '$7');
 
-interface BannerMainProperties {
+type BannerMainProperties = {
     videoTitle: string,
     videoDescription: string
     url: string
