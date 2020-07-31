@@ -7,10 +7,8 @@ import { BannerMain } from './components/BannerMain';
 import {Container} from './styles';
 
 
-export const App: FC = () => 
-
-  (
-    <Container>
+export const App: FC = () => (
+  <Container>
 
     <BannerMain
       videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
@@ -39,4 +37,4 @@ export const App: FC = () =>
 
     <Footer />
   </Container>
-  )
+)
