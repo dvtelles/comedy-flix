@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const VideoCardContainer = styled.a<{url:string}>`
+type VideoCardContainerProps = {
+  url: string,
+  borderColor : string
+};
+
+export const VideoCardContainer = styled.a<VideoCardContainerProps>`
   border: 2px solid;
   border-radius: 4px;
   text-decoration: none;
@@ -14,6 +19,7 @@ export const VideoCardContainer = styled.a<{url:string}>`
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  border-color: ${props => props.borderColor || 'red'}
   position: relative;
   display: flex;
   align-items: flex-end;

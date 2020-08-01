@@ -1,14 +1,6 @@
-import styled, { StyledComponentBase } from 'styled-components';
+import styled from 'styled-components';
 
-interface IContentAreaContainer extends StyledComponentBase<any, {}> {
-    Item?: any,
-    Category?: any,
-    Description?: any,
-    Type?: any,
-    Title?: any
-}
-
-export const ContentAreaContainer:IContentAreaContainer = styled.section`
+const Container = styled.section`
   margin-left: 5%;
   margin-right: 5%;
   height: 100%;
@@ -23,7 +15,7 @@ export const ContentAreaContainer:IContentAreaContainer = styled.section`
   }
 `;
 
-ContentAreaContainer.Item = styled.div`
+const Item = styled.div`
   width: 50%;
   display: inline-block;
   margin-bottom: 50px;
@@ -32,7 +24,7 @@ ContentAreaContainer.Item = styled.div`
   }
 `;
 
-ContentAreaContainer.Category = styled.h1`
+const Category = styled.h1`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -53,13 +45,13 @@ ContentAreaContainer.Category = styled.h1`
   }
 `;
 
-ContentAreaContainer.Description = styled.p`
+const Description = styled.p`
   @media (max-width: 800px) {
     display: none;
   }
 `;
 
-ContentAreaContainer.Title = styled.h2`
+const Title = styled.h2`
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
@@ -73,7 +65,7 @@ ContentAreaContainer.Title = styled.h2`
   }
 `;
 
-export const BannerMainContainer = styled.section<{backgroundImage : string}>`
+const BannerMainContainer = styled.section<{backgroundImage : string}>`
   height: 80vh;
   position: relative;
   color: #fff;
@@ -108,7 +100,7 @@ export const BannerMainContainer = styled.section<{backgroundImage : string}>`
   }
 `;
 
-export const WatchButton = styled.button`
+const WatchButton = styled.button`
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
@@ -131,3 +123,6 @@ export const WatchButton = styled.button`
     display: block;
   }
 `;
+
+
+export {Container,  Item,  Category,  Description,  Title,  BannerMainContainer,  WatchButton}

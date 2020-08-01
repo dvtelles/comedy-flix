@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
-import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import {VideoCard} from './components/VideoCard';
+import { Slider, SliderItem } from './Slider';
+
 
 interface VideoCardGroupProperties {
     ignoreFirstVideo: boolean,
@@ -27,23 +29,23 @@ export const Carousel: FC<VideoCardGroupProperties> = ({ignoreFirstVideo, catego
           }
         </>
       )}
-      <VideoCardList>
+      <Slider>
         {videos.map((video: any, index: number) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
 
           return (
-            <li key={video.titulo}>
+            <SliderItem key={video.titulo}>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
                 categoryColor={categoryColor}
               />
-            </li>
+            </SliderItem>
           );
         })}
-      </VideoCardList>
+      </Slider>
     </VideoCardGroupContainer>
     )
 }

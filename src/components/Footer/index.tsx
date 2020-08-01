@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
-import {FooterBase} from './styles';
+import {FooterBase, AluraLogo, AluraLogoLink} from './styles';
 
 export const Footer: FC = () => {
 
     return (
         <FooterBase>
-            <a href="https://www.alura.com.br">
-                <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
-            </a>
+            <AluraLogoLink >
+                <AluraLogo />
+            </AluraLogoLink>
             <p>
                 Orgulhosamente criado durante a
                 {' '}
