@@ -1,17 +1,29 @@
-import React, { FC } from 'react';
-import {VideoIframeResponsive} from './components/VideoIframeResponsive';
-import {Container,  Item, Description,  Title,  BannerMainContainer,  WatchButton} from './styles';
-import { getYoutubeId } from '../../utils/youtube';
+import React, { FC } from 'react'
+
+import { getYoutubeId } from '../../utils/youtube'
+import { VideoIframeResponsive } from './components/VideoIframeResponsive'
+import {
+    Container,
+    Item,
+    Description,
+    Title,
+    BannerMainContainer,
+    WatchButton,
+} from './styles'
 
 type BannerMainProperties = {
-    videoTitle: string,
+    videoTitle: string
     videoDescription: string
     url: string
 }
 
-export const BannerMain: FC<BannerMainProperties> = ({ videoTitle, videoDescription, url }) => {
-    const youtubeId = getYoutubeId(url);
-    const bgUrl = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+export const BannerMain: FC<BannerMainProperties> = ({
+    videoTitle,
+    videoDescription,
+    url,
+}) => {
+    const youtubeId = getYoutubeId(url)
+    const bgUrl = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
 
     return (
         <BannerMainContainer backgroundImage={bgUrl}>
