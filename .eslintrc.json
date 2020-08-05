@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "ignorePatterns": ["node_modules/"],
+  "extends": [
+    "vtex-react",
+    "plugin:unicorn/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "unicorn"],
+  "rules": {
+    "semi": [2, "never"],
+    "@typescript-eslint/camelcase": "off",
+    "camelcase": [2, {"properties": "always"}],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        }
+      }
+    ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "whitelist": {
+          "props": true,
+          "Props": true,
+          "Ref": true,
+          "ref": true
+        }
+      }
+  ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
+  }
+}
