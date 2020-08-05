@@ -1,11 +1,14 @@
-import React, { FC } from 'react';
-import { VideoContainer, ResponsiveIframe } from './styles';
+import React, { FC } from 'react'
+
+import { VideoContainer, ResponsiveIframe } from './styles'
 
 type VideoIframeResponsiveProps = {
     youtubeId: string
 }
 
-export const VideoIframeResponsive: FC<VideoIframeResponsiveProps> = ({ youtubeId }) => (
+export const VideoIframeResponsive: FC<VideoIframeResponsiveProps> = ({
+    youtubeId,
+}) => (
     <VideoContainer>
         <ResponsiveIframe
             title="Titulo do Iframe"

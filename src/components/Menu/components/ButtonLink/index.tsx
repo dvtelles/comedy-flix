@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+
 export const ButtonLink = styled.a`
     color: var(--white);
     border: 1px solid var(--white);
@@ -12,22 +13,22 @@ export const ButtonLink = styled.a`
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: opacity .3s;
-  &:hover,
-  &:focus {
-    opacity: .5;
-  }
-  
-  @media (max-width: 800px) {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--primary);
-    border-radius: 0;
-    border: 0;
-    text-align: center;
-  }
+    transition: opacity 0.3s;
+    &:hover,
+    &:focus {
+        opacity: 0.5;
+    }
+
+    @media (max-width: 800px) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--primary);
+        border-radius: 0;
+        border: 0;
+        text-align: center;
+    }
 `
 
 // export const ButtonLink: FC<ButtonLinkProps> = ({ href, className, children }) => (

@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 type VideoCardContainerProps = {
-  url: string,
-  borderColor : string
-};
+    url: string
+    borderColor: string
+}
 
 export const VideoCardContainer = styled.a<VideoCardContainerProps>`
   border: 2px solid;
@@ -19,7 +19,7 @@ export const VideoCardContainer = styled.a<VideoCardContainerProps>`
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  border-color: ${props => props.borderColor || 'red'}
+  border-color: ${props => props.borderColor || 'red'};
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -34,4 +34,4 @@ export const VideoCardContainer = styled.a<VideoCardContainerProps>`
   &:not(:first-child) {
     margin-left: 20px;
   }
-`;
+`
