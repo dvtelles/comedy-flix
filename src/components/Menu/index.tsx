@@ -11,7 +11,7 @@ export const Menu:FC = () => {
             <Link to="/" >
                 <Logo />
             </Link>
-            <ButtonLink href="/cadastro/video">
+            <ButtonLink as={Link} to="/cadastro/video">
                 Novo vídeo
             </ButtonLink>
         </nav>
