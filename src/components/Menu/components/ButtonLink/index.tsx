@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 type ButtonLinkProps = {
-    href: string,
+  href: string,
 }
 
 export const ButtonLink = styled.a`
@@ -34,9 +34,3 @@ export const ButtonLink = styled.a`
     text-align: center;
   }
 `
-
-// export const ButtonLink: FC<ButtonLinkProps> = ({ href, className, children }) => (
-//     <a className={className} href={href}>
-//         {children}
-//     </a>
-// )

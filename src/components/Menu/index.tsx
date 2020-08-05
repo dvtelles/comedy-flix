@@ -1,25 +1,20 @@
-import React, { FC } from 'react';
-import { ButtonLink } from './components/ButtonLink'
-import './Menu.css'
+import React, {FC} from 'react';
+import {ButtonLink} from './components/ButtonLink';
+import './Menu.css';
+import { Link } from 'react-router-dom';
+import { Logo } from '../shared/Logo';
 
-import styled from 'styled-components';
-import LogoImg from '../../assets/img/Logo.png';
+export const Menu:FC = () => {
 
-export const Logo = styled.img.attrs({
-    alt: 'Logo comedy flix',
-    src: LogoImg,
-})`
-  max-width: 168px;
-`
+    return (
+        <nav className="Menu">
+            <Link to="/" >
+                <Logo />
+            </Link>
+            <ButtonLink href="/cadastro/video">
+                Novo vídeo
+            </ButtonLink>
+        </nav>
+    )
 
-
-export const Menu: FC = () => (
-    <nav className="Menu">
-        <a href="/">
-            <Logo />
-        </a>
-        <ButtonLink href="/">
-            Novo vídeo
-        </ButtonLink>
-    </nav>
-)
+}
